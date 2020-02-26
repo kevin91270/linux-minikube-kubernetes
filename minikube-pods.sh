@@ -6,3 +6,5 @@ sudo kubectl apply -f ./service-postgres.yml
 sudo kubectl apply -f ./dp-vuejs.yml
 sudo kubectl apply -f ./dp-strapi.yml
 sudo kubectl apply -f ./dp-postgres.yml
+
+sudo kubectl get services -n eval

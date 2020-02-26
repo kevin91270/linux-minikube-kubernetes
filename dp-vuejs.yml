@@ -4,7 +4,7 @@ metadata:
   name: vuejs
   namespace: eval
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: vuejs
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: vuejs
-        image: kevin91270/vuejs-eval:001
+        image: mehdimd/vuejs:01
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
