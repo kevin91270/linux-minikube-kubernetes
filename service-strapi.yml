@@ -9,5 +9,5 @@ spec:
   ports:
   - protocol: TCP
     port: 1337
-    targetPort: 1337
+    nodePort: 31932
   type: NodePort

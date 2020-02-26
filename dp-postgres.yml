@@ -17,5 +17,12 @@ spec:
       - name: postgres
         image: kevin91270/vuejs-eval:001
         imagePullPolicy: Always
+        env:
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "strapi"
+        - name: POSTGRES_DB
+          value: "strapi"
         ports:
         - containerPort: 5432
