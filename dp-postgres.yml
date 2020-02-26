@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: eval
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vuejs
+  template:
+    metadata:
+      labels:
+        app: vuejs
+    spec:
+      containers:
+      - name: postgres
+        image: kevin91270/vuejs-eval:001
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5432
