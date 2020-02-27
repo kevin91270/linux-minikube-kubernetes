@@ -17,12 +17,8 @@ spec:
       - name: postgres
         image: postgres:latest
         imagePullPolicy: Always
-        env:
-        - name: POSTGRES_USER
-          value: "postgres"
-        - name: POSTGRES_PASSWORD
-          value: "strapi"
-        - name: POSTGRES_DB
-          value: "strapi"
+        envFrom:
+          - configMapRef:
+              name: postgres-config
         ports:
         - containerPort: 5432

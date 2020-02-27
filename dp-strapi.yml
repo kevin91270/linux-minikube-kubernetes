@@ -17,20 +17,8 @@ spec:
       - name: strapi
         image: strapi/strapi:latest
         imagePullPolicy: Always
-        env:
-        - name : DATABASE_CLIENT
-          value: "postgres"
-        - name: DATABASE_HOST
-          value: "postgres.eval.svc.cluster.local"
-        - name: DATABASE_PORT
-          value: "5432"
-        - name: DATABASE_NAME
-          value: "strapi"
-        - name: DATABASE_USERNAME
-          value: "postgres"
-        - name: DATABASE_PASSWORD
-          value: "strapi"            
-        - name: EXTRA_ARGS
-          value: "strapi new"
+        envFrom:
+          - configMapRef:
+              name: strapi-config
         ports:
         - containerPort: 8080
