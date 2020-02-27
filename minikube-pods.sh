@@ -8,3 +8,5 @@ sudo kubectl apply -f ./dp-strapi.yml
 sudo kubectl apply -f ./dp-postgres.yml
 
 sudo kubectl get services -n eval
+sudo chmod +x kubernetes.sh
+sudo ./kubernetes.sh
