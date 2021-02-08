@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: node
-        image: kevin91270/backend-eval-final:latest
+        image: kevin91270/backend-eval-finalv2:latest
         ports:
         - containerPort: 3000
