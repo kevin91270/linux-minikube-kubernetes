@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-mongodb-service-test
+  name: my-mongodb-test
   namespace: eval
 spec:
   clusterIP: 10.96.202.227
