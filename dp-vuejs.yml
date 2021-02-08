@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: vuejs
-        image: mehdimd/vuejs:01
+        image: kevin91270/front-vue-eval:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

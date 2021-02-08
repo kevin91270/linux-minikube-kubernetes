@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node
+  namespace: eval
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+      - name: node
+        image: kevin91270/backend-eval-final:latest
+        ports:
+        - containerPort: 3000

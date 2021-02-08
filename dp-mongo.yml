@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-mongodb-test
+  namespace: eval   
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-mongodb-test
+  template:  
+    metadata:
+      labels:
+        app: my-mongodb-test
+    spec:
+      containers: 
+        - name: mongo
+          image: mongo:4.0.9
+          ports:
+            - containerPort: 27017
