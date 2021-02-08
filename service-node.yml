@@ -4,7 +4,6 @@ metadata:
   name: node
   namespace: eval
 spec:
-  clusterIP: 10.96.202.227
   selector:
     app: node
   ports:
