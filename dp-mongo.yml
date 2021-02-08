@@ -18,3 +18,11 @@ spec:
           image: mongo:4.0.9
           ports:
             - containerPort: 27017
+          volumeMounts:
+            - mountPath: /mnt/data/db
+              name: task-pv-storage
+      volumes:
+      - name: task-pv-storage
+        persistentVolumeClaim:
+          claimName: task-pv-claim
+      restartPolicy: Always
