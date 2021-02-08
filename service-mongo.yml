@@ -6,7 +6,7 @@ metadata:
 spec:
   clusterIP: 10.96.202.227
   selector:
-    app: my-mongodb
+    app: my-mongodb-test
   ports:
   - port: 27017
     targetPort: 27017 
